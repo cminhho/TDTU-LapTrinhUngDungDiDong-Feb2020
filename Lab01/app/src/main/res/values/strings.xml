@@ -1,0 +1,22 @@
+<resources>
+  <string name="app_name">Lab01</string>
+  <!--Exercise01-->
+  <string name="exercise01_msg_enter_your_content_here">Enter your content here</string>
+  <string name="exercise01_msg_textview_to_display_your_content">TextView to display your content</string>
+  <string name="exercise01_action_click_me">Click Me</string>
+  <string name="exercise01_error_content_require">vui lòng nhập thông tin</string>
+  <!--Exercise02-->
+  <string name="exercise02_mgs_list_of_checkboxes_for_selection">List of Checkboxes for selection</string>
+  <string name="exercise02_mgs_list_of_radio_buttons_for_selection">List of Radio Buttons for selection</string>
+  <string name="exercise02_msg_android">Android</string>
+  <string name="exercise02_msg_ios">IOS</string>
+  <string name="exercise02_msg_windows">Windows</string>
+  <string name="exercise02_msg_rim">RIM</string>
+  <string name="exercise02_action_click_here_to_see_results">Click here to see Results</string>
+  <string name="exercise02_msg_the_following_were_selected">The following were selected...</string>
+  <string name="exercise02_label_android">Android:</string>
+  <string name="exercise02_label_ios_label">iOS:</string>
+  <string name="exercise02_label_windows">Windows:</string>
+  <string name="exercise02_label_rim">RIM:</string>
+  <string name="exercise02_checkbox_default_value">false</string>
+</resources>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:padding="10dp">
+
+
+  <TextView
+    android:id="@+id/txt_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/exercise02_mgs_list_of_checkboxes_for_selection" />
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <CheckBox
+      android:id="@+id/cbAndroid"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/exercise02_msg_android" />
+
+    <CheckBox
+      android:id="@+id/cbIOS"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/exercise02_msg_ios" />
+
+    <CheckBox
+      android:id="@+id/cbWindows"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/exercise02_msg_windows" />
+
+    <CheckBox
+      android:id="@+id/cbRIM"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/exercise02_msg_rim" />
+  </LinearLayout>
+
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:text="@string/exercise02_mgs_list_of_radio_buttons_for_selection"/>
+
+  <RadioGroup
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RadioButton
+      android:id="@+id/rbAndroid"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/exercise02_msg_android" />
+
+    <RadioButton
+      android:id="@+id/rbIOS"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/exercise02_msg_ios"/>
+
+    <RadioButton
+      android:id="@+id/rbWindows"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/exercise02_msg_windows" />
+
+    <CheckBox
+      android:id="@+id/rbRIM"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/exercise02_msg_rim"  />
+  </RadioGroup>
+
+  <Button
+    android:id="@+id/btnSeeResult"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:text="@string/exercise02_action_click_here_to_see_results" />
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:orientation="vertical">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/exercise02_msg_the_following_were_selected" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exercise02_label_android" />
+
+      <TextView
+        android:id="@+id/txtAndroid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="false" />
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exercise02_label_ios_label" />
+
+      <TextView
+        android:id="@+id/txtIOS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exercise02_checkbox_default_value" />
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exercise02_label_windows" />
+
+      <TextView
+        android:id="@+id/txtWindows"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exercise02_checkbox_default_value" />
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exercise02_label_rim" />
+
+      <TextView
+        android:id="@+id/txtRIM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exercise02_checkbox_default_value" />
+    </LinearLayout>
+  </LinearLayout>
+
+
+</LinearLayout>
