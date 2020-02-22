@@ -2,7 +2,7 @@
 ### Requirements
 - Working with LinearLayout and RelativeLayout
 ### Output:
-<img width="400" src="https://github.com/cminhho/TDTU-LapTrinhUngDungDiDong-Feb2020/tree/master/Lab02/screenshots/screenshots/excercise01.png" alt="Working with LinearLayout and RelativeLayout"/>
+<img width="400" src="/screenshots/excercise01.png" alt="Working with LinearLayout and RelativeLayout"/>
 
 
 ## Lab 02 - 02
