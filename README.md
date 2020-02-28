@@ -1,14 +1,14 @@
-# TDTU-LapTrinhUngDungDiDong-Feb2020
+# TDTU-LapTrinhUngDungDiDong
+## Introduction
+Providing Android exercises for reference purposes.
 
-# Lab 01 - 01
-## Requirements
-- Adding a click listener to a Button
-- Adding a text change listener to a EditText
-- Using getText and setText method with EditText
-- Displaying Toast
-- Disable/Enable View (Button, EditText, TextView,…)
+## Lab exercise
 
-# Lab 01 - 02
-## Requirements
-- Working with CheckBox
-- Working with RadioGroup
+## Final exercise
+<b>Restaurant project</b>
+- Live demo: https://tdt-firestore-d67b0.firebaseapp.com/
+
+## References
+- https://developer.android.com/studio/workflow
+- Online courses(Youtube): https://www.youtube.com/watch?v=6GYxLnAHM9c&list=PLkS7uDg15BfK2qgXHmDglp06tn8cgoikX
+
