@@ -1,6 +1,6 @@
-package vn.edu.tdtu.lab03;
+package vn.edu.tdtu.lab03.exercise01;
 
-import static vn.edu.tdtu.lab03.Exercise01MainActivity.EMAIL_BUNDLE;
+import static vn.edu.tdtu.lab03.exercise01.Exercise01MainActivity.EMAIL_BUNDLE;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,12 +12,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import vn.edu.tdtu.lab03.R;
 
 public class WelcomeActivity extends AppCompatActivity {
 
   public static final String USER_FULLNAME = "user_fullname";
 
-  private TextView tvWelcomneMsg;
+  private TextView tvWelcomeMsg;
   private EditText etUserFullname;
   private Button btnSaveAndQuick;
 
@@ -27,20 +28,21 @@ public class WelcomeActivity extends AppCompatActivity {
     setContentView(R.layout.activity_exercise01_welcome);
 
     // bind UI controls to Java objects
-    tvWelcomneMsg = findViewById(R.id.tv_welcome_message);
+    tvWelcomeMsg = findViewById(R.id.tv_welcome_message);
     etUserFullname = findViewById(R.id.et_user_fullname);
     btnSaveAndQuick = findViewById(R.id.btn_save_and_quick);
 
-    // create intent that started this activity
-    Intent exercise01Intent = getIntent();
+    // get intent that started this activity
+    Intent callerIntent = getIntent();
 
-    // get bundle container
-    Bundle exercise01Bundle = exercise01Intent.getExtras();
+    // retrieve map of extended data from the intent
+    Bundle callerBundle = callerIntent.getExtras();
 
-    String emailReceived = exercise01Bundle.getString(EMAIL_BUNDLE);
+    // get given key-value map
+    String emailReceived = callerBundle.getString(EMAIL_BUNDLE);
 
     // bind data received from MainActivity
-    tvWelcomneMsg.setText("Xin chào, " + emailReceived + ". Vui lòng nhập tên:");
+    tvWelcomeMsg.setText("Xin chào, " + emailReceived + ". Vui lòng nhập tên:");
 
     // add ui control's events
     btnSaveAndQuick.setOnClickListener(new OnClickListener() {

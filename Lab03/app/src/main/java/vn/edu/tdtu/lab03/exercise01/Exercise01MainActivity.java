@@ -1,6 +1,6 @@
-package vn.edu.tdtu.lab03;
+package vn.edu.tdtu.lab03.exercise01;
 
-import static vn.edu.tdtu.lab03.WelcomeActivity.USER_FULLNAME;
+import static vn.edu.tdtu.lab03.exercise01.WelcomeActivity.USER_FULLNAME;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,10 +9,10 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import vn.edu.tdtu.lab03.R;
 
 public class Exercise01MainActivity extends AppCompatActivity {
 
@@ -59,12 +59,12 @@ public class Exercise01MainActivity extends AppCompatActivity {
     super.onActivityResult(requestCode, resultCode, data);
 
     if (requestCode == 100 && resultCode == Activity.RESULT_OK) {
-      // create bundle with data items
-      Bundle welcomeBundle = data.getExtras();
-      String userFullname = welcomeBundle.getString(USER_FULLNAME);
+      // Retrieve a map of extended data from the intent.
+      Bundle returnedBundle = data.getExtras();
+      String returnedFullname = returnedBundle.getString(USER_FULLNAME);
 
-      // bind ui values
-      etEmail.setText(userFullname);
+      // display values
+      etEmail.setText(returnedFullname);
       tvMessage.setText("Hẹn gặp lại!");
       btnLogin.setVisibility(View.GONE);
     }

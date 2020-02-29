@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   package="vn.edu.tdtu.lab03">
 
-  <uses-permission android:name="android.permission.INTERNET"/>
-
   <application
     android:allowBackup="true"
     android:icon="@mipmap/ic_launcher"
@@ -11,17 +9,46 @@
     android:roundIcon="@mipmap/ic_launcher_round"
     android:supportsRtl="true"
     android:theme="@style/AppTheme">
-    <activity android:name=".Exercise01MainActivity" android:label="Exercise 01 - Main">
-    </activity>
-    <activity android:name=".WelcomeActivity" android:label="Exercise 01 - Welcome "></activity>
+    <!-- Exercise 01 -->
+    <activity
+      android:label="Exercise 01 - Main"
+      android:name=".exercise01.Exercise01MainActivity"></activity>
+    <activity
+      android:label="Exercise 01 - Welcome "
+      android:name=".exercise01.WelcomeActivity"></activity>
 
-    <activity android:name=".exercise02.Exercise2Activity" android:label="Exercise 02">
+    <!-- Exercise 02 -->
+    <activity
+      android:label="Exercise 02"
+      android:name=".exercise02.Exercise02Activity"></activity>
+
+    <!-- Exercise 03 -->
+    <activity android:name=".exercise03.Exercise03Activity" android:label="Exercise 03 - Activity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
-
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+    <activity
+      android:label="Exercise 03 - Browser"
+      android:name=".exercise03.BrowserActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="http" />
+      </intent-filter>
+    </activity>
+
+    <!-- Exercise 04 -->
+    <activity
+      android:label="Exercise 04"
+      android:name=".exercise04.Exercise04Activity">
+    </activity>
+
   </application>
+
+  <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

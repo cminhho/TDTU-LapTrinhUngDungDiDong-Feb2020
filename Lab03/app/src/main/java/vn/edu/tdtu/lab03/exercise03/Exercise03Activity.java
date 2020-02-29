@@ -1,4 +1,4 @@
-package vn.edu.tdtu.lab03.exercise02;
+package vn.edu.tdtu.lab03.exercise03;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import vn.edu.tdtu.lab03.R;
 
-public class Exercise2Activity extends AppCompatActivity {
+public class Exercise03Activity extends AppCompatActivity {
 
   private TextView tvWebsiteMsg;
   private EditText etWebsiteUrl;
