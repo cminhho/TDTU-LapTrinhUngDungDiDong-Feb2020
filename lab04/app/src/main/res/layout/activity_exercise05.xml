@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:padding="5dp">
+
+  <ListView
+    android:id="@+id/lv_users"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:layout_marginTop="@dimen/medium_margin"
+    android:scrollbars="vertical" />
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/medium_margin">
+    <TextView
+      android:id="@+id/activity_users_txt_total_users"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/small_margin"
+      android:text="Total users: 0"/>
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="@dimen/medium_margin">
+    <Button
+      android:id="@+id/activity_users_btn_create"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@color/colorPrimary"
+      android:textColor="@color/colorWhite"
+      android:padding="@dimen/small_margin"
+      android:text="Add 5 More Users"/>
+
+    <Button
+      android:id="@+id/activity_users_btn_remove"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@color/colorDanger"
+      android:textColor="@color/colorWhite"
+      android:padding="@dimen/small_margin"
+      android:layout_marginLeft="@dimen/medium_margin"
+      android:text="Remove Last 5 Users"/>
+  </LinearLayout>
+
+</LinearLayout>
