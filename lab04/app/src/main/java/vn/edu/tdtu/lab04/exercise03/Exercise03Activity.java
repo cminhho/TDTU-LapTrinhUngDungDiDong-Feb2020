@@ -25,6 +25,7 @@ public class Exercise03Activity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_exercise03);
 
+    // bind UI controls to Java objects
     lvPhones = findViewById(R.id.lv_phones);
     btnRemoveAll = findViewById(R.id.btn_remove_all);
     btnRemoveSelected = findViewById(R.id.btn_remove_selected);

@@ -33,12 +33,11 @@ public class Exercise05Activity extends AppCompatActivity {
     btnRemove = findViewById(R.id.activity_users_btn_remove);
     txtTotalUsers = findViewById(R.id.activity_users_txt_total_users);
 
-    generateRandomItems();
-    setAdapter();
+    setCustomAdapter();
     handleEvents();
   }
 
-  private void setAdapter() {
+  private void setCustomAdapter() {
     phoneArrayAdapter = new UserArrayAdapter(this,
         R.layout.exercise05_list_item_row, users);
     lvUsers.setAdapter(phoneArrayAdapter);
@@ -68,11 +67,6 @@ public class Exercise05Activity extends AppCompatActivity {
     });
   }
 
-  private void generateRandomItems() {
-    for (int i = 0; i < TOTAL_ITEMS; i++) {
-      users.add(new User("User " + i, "user" + i + "@tdu.edu.vn"));
-    }
-  }
   private void setTotalUsers() {
     int numberOfUsers = users.size();
     txtTotalUsers.setText("Total users: " + numberOfUsers);
@@ -85,9 +79,9 @@ public class Exercise05Activity extends AppCompatActivity {
   }
 
   private void populateUserDetails(int numberOfUsers) {
-    int from = users.size() + 1;
-    int to = from + numberOfUsers;
-    for (int i = from; i < to; i++) {
+    int indexFrom = users.size() + 1;
+    int indexTo = indexFrom + numberOfUsers;
+    for (int i = indexFrom; i < indexTo; i++) {
       users.add(new User("User " + i, "user" + i + "@tdtu.edu.vn"));
     }
   }

@@ -52,12 +52,14 @@ public class ItemsArrayAdapter extends ArrayAdapter<String> {
       // sub-components
       LayoutInflater inflater = ((Activity) context).getLayoutInflater();
       row = inflater.inflate(layoutToBeInflated, null);
+
       holder = new ItemViewHolder();
+
       // plumbing - provide access to each widget in the inflated layout
-      // (two images & two lines of text)
       holder = new ItemViewHolder();
       holder.tvItemName = row.findViewById(R.id.tv_item);
       holder.btnRemove = row.findViewById(R.id.btn_remove);
+
       // identify this row with the POJO holder just created
       row.setTag(holder);
     } else {
@@ -89,7 +91,6 @@ public class ItemsArrayAdapter extends ArrayAdapter<String> {
   }
 
   public class ItemViewHolder {
-
     TextView tvItemName;
     Button btnRemove;
   }

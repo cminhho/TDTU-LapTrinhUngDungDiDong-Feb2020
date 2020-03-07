@@ -7,14 +7,12 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import java.util.List;
 import vn.edu.tdtu.lab04.R;
-import vn.edu.tdtu.lab04.exercise04.Computer;
 
 public class UserArrayAdapter extends ArrayAdapter<User> {
 
@@ -52,7 +50,7 @@ public class UserArrayAdapter extends ArrayAdapter<User> {
 
     User user = users.get(position);
     holder.tvUsername.setText(user.getUsername());
-    holder.tvEmail.setText(user.getUsername());
+    holder.tvEmail.setText(user.getEmail());
 
     // row listener (user clicks on any other part of the row)
     row.setOnClickListener(new OnClickListener() {
@@ -61,8 +59,6 @@ public class UserArrayAdapter extends ArrayAdapter<User> {
         User user = users.get(position);
         Toast.makeText(context,
             "USER CLICKED - " + user.getUsername(), Toast.LENGTH_SHORT).show();
-
-        notifyDataSetChanged();
       }
     });
 

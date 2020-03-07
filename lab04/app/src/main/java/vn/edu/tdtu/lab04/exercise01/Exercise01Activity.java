@@ -32,6 +32,7 @@ public class Exercise01Activity extends AppCompatActivity {
   }
 
   private void addOnItemClickListener() {
+    // add listview a listener so user can meake selections by tapping an item
     lv_item.setOnItemClickListener(new OnItemClickListener() {
       @Override
       public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -42,6 +43,7 @@ public class Exercise01Activity extends AppCompatActivity {
   }
 
   private void setListAdapter() {
+    // use adapter to bind items array to GUI layout
     ArrayAdapter<String> itemArrayAdapter = new ArrayAdapter<>(this,
         android.R.layout.simple_list_item_1, items);
     lv_item.setAdapter(itemArrayAdapter);

@@ -20,10 +20,10 @@ public class Exercise04Activity extends AppCompatActivity {
     gvComputers = findViewById(R.id.gvComputers);
 
     generateRandomItems();
-    handleEvents();
+    setCustomAdapter();
   }
 
-  private void handleEvents() {
+  private void setCustomAdapter() {
     ComputerArrayAdapter computerArrayAdapter = new ComputerArrayAdapter(this,
         R.layout.exercise04_grid_item_row, computers);
     gvComputers.setAdapter(computerArrayAdapter);
