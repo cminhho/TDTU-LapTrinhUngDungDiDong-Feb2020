@@ -8,6 +8,8 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
@@ -51,18 +53,15 @@ public class PhoneArrayAdapter extends ArrayAdapter<Phone> {
 
     Phone phone = computers.get(position);
     holder.tvPhoneName.setText(phone.getName());
-    holder.cbSelectPhone.setActivated(phone.isSelected());
+    holder.cbSelectPhone.setChecked(phone.isSelected());
 
     // row listener (user clicks on any other part of the row)
     row.setOnClickListener(new OnClickListener() {
       @Override
       public void onClick(View v) {
         Phone computer = computers.get(position);
-        computer.setSelected(!computer.isSelected());
         Toast.makeText(context,
-            "COMPUTER CLICKED - " + computer.getName(), Toast.LENGTH_SHORT).show();
-
-        notifyDataSetChanged();
+            "PHONE CLICKED - " + computer.getName(), Toast.LENGTH_SHORT).show();
       }
     });
 

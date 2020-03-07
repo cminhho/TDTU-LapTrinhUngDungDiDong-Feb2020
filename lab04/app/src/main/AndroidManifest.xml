@@ -14,15 +14,16 @@
     <activity android:name=".exercise02.Exercise02Activity" android:label="Lab 04 - Exercise 02">
     </activity>
     <activity android:name=".exercise03.Exercise03Activity" android:label="Lab 04 - Exercise 03">
-    </activity>
-    <activity android:name=".exercise04.Exercise04Activity" android:label="Lab 04 - Exercise 04">
-    </activity>
-    <activity android:name=".exercise05.Exercise05Activity" android:label="Lab 04 - Exercise 05">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
 
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
+    </activity>
+    <activity android:name=".exercise04.Exercise04Activity" android:label="Lab 04 - Exercise 04">
+    </activity>
+    <activity android:name=".exercise05.Exercise05Activity" android:label="Lab 04 - Exercise 05">
+
     </activity>
   </application>
 

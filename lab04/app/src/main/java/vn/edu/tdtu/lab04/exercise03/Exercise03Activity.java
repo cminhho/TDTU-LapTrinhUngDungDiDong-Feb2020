@@ -51,7 +51,6 @@ public class Exercise03Activity extends AppCompatActivity {
           if (phone.isSelected()) {
             phone.setSelected(false);
           }
-          phone.setSelected(false);
         }
         phoneArrayAdapter.notifyDataSetChanged();
       }
