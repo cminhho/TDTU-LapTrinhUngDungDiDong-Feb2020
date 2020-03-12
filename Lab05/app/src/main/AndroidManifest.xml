@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="vn.edu.tdtu.lab05">
+
+  <application
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@style/AppTheme">
+    <activity android:name=".exericse01.Exercise01Activity" android:label="Lab 05 - Exercise 01">
+    </activity>
+    <activity android:name=".exercise02.Exercise02Activity" android:label="Lab 05 - Exercise 02">
+    </activity>
+    <activity android:name=".exercise05.Exercise05Activity" android:label="Lab 05 - Exercise 05">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+  </application>
+
+</manifest>
