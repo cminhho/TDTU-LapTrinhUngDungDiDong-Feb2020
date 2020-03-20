@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.lab06">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".exercise01.Exercise01Activity" android:label="Lab 06 - Exercise 01">
+        </activity>
+        <activity android:name=".exercise02.Exercise02Activity" android:label="Lab 06 - Exercise 02">
+        </activity>
+
+        <!--exercise 03-->
+        <activity android:name=".exercise03.Exercise03Activity" android:label="Lab 06 - Exercise 03">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+          android:name=".exercise03.NewEventActivity"
+          android:label="Create new event"
+          android:parentActivityName=".exercise03.Exercise03Activity"
+          >
+        </activity>
+    </application>
+
+</manifest>
