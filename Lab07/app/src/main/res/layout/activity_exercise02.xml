@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:padding="8dp"
+  android:orientation="vertical">
+
+  <EditText
+    android:id="@+id/edtContent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="top"
+    android:hint="@string/your_content"
+    android:inputType="textCapSentences|textMultiLine"
+    android:lines="5"
+    android:textColorHint="@color/colorPrimary"
+    android:textSize="16dp" />
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <Button
+      android:id="@+id/btnReadInternal"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:text="@string/read_internal_file"
+      tools:ignore="ButtonStyle" />
+
+    <Button
+      android:id="@+id/btnReadExternal"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:text="@string/read_external_file"
+      tools:ignore="ButtonStyle" />
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <Button
+      android:id="@+id/btnWriteInternal"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:text="@string/write_internal_file"
+      tools:ignore="ButtonStyle" />
+
+    <Button
+      android:id="@+id/btnWriteExternal"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:text="@string/write_external_file"
+      tools:ignore="ButtonStyle" />
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="50dp"
+    android:orientation="vertical">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="the internal file's path: "/>
+
+    <TextView
+      android:id="@+id/txtInternalFilePath"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="16dp"
+      android:textStyle="bold"
+      android:text="the internal file's path value"/>
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="the SD file's path: "/>
+
+    <TextView
+      android:id="@+id/txtSDFilePath"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textStyle="bold"
+      android:textSize="16dp"
+      android:text="the SD file's path value"/>
+  </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="vn.edu.tdtu.lab07">
+
+  <application
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@style/AppTheme">
+    <activity
+      android:label="Exercise 01"
+      android:name="vn.edu.tdtu.lab07.exercise01.Exercise01Activity"></activity>
+    <activity
+      android:label="Exercise 02"
+      android:name="vn.edu.tdtu.lab07.exercise02.Exercise02Activity"></activity>
+    <activity
+      android:label="Exercise 03"
+      android:name="vn.edu.tdtu.lab07.exercise03.Exercise03Activity"></activity>
+    <activity
+      android:name="vn.edu.tdtu.lab07.exercise03.NewEventActivity"
+      android:parentActivityName="vn.edu.tdtu.lab07.exercise03.Exercise03Activity"></activity>
+    <activity
+      android:label="Exercise 04"
+      android:name="vn.edu.tdtu.lab07.exercise04.Exercise04Activity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name="vn.edu.tdtu.lab07.exercise04.NewEventActivity"
+      android:parentActivityName="vn.edu.tdtu.lab07.exercise04.Exercise04Activity"></activity>
+  </application>
+
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+</manifest>
