@@ -25,8 +25,6 @@ public class Exercise02Activity extends AppCompatActivity implements View.OnClic
 
   private static final String EXTERNAL_FILE_NAME = "lab07_exercise02_external_file.txt";
 
-  private static final String DEFAULT_FILE_CONTENT = "";
-
   private String TAG = Exercise02Activity.class.getName();
 
   private Button btnReadInternal;
