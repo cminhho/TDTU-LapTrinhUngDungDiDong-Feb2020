@@ -15,7 +15,7 @@ public class Exercise01Activity extends AppCompatActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_exercise01);
+    setContentView(R.layout.exercise01_activity);
 
     tvOpenTime = findViewById(R.id.tvOpenTimes);
 

@@ -40,7 +40,7 @@ public class Exercise02Activity extends AppCompatActivity implements View.OnClic
   public void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
-    setContentView(R.layout.activity_exercise02);
+    setContentView(R.layout.exercise02_activity);
 
     // map ui controls to java objects
     btnReadInternal = findViewById(R.id.btnReadInternal);
