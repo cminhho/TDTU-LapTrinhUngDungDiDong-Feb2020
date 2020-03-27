@@ -5,6 +5,7 @@ import static vn.edu.tdtu.lab07.exercise03.Exercise03Activity.INTENT_EVENT_ACTIO
 import static vn.edu.tdtu.lab07.exercise03.Exercise03Activity.INTENT_EVENT_ID;
 import static vn.edu.tdtu.lab07.exercise03.Exercise03Activity.INTENT_NEW_EVENT_ACTION;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
@@ -32,21 +33,16 @@ import java.util.Calendar;
 import vn.edu.tdtu.lab07.R;
 
 public class NewEventActivity extends AppCompatActivity {
-
-  public static final String TITLE = "TITLE";
-  public static final String PLACE = "PLACE";
-  public static final String DATE = "DATE";
-  public static final String TIME = "TIME";
   private EditText etName;
   private TextView etNameError;
   private EditText etPlace;
   private EditText etDate;
   private EditText etTime;
-  private String[] places = new String[]{"C201", "C202", "C203", "C204"};
   private EventDatabaseHelper mDbHelper;
   boolean isNew = false;
   private Event selectedEvent;
 
+  @SuppressLint("ClickableViewAccessibility")
   @Override
   public void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -89,7 +85,7 @@ public class NewEventActivity extends AppCompatActivity {
           showPlaceSelectionDialog();
         }
 
-        return true; // return is important...
+        return true;
       }
     });
 
@@ -100,7 +96,7 @@ public class NewEventActivity extends AppCompatActivity {
           showDateSelectionDialog();
         }
 
-        return true; // return is important...
+        return true;
       }
     });
 
@@ -111,7 +107,7 @@ public class NewEventActivity extends AppCompatActivity {
           showTimeSelectionDialog();
         }
 
-        return true; // return is important...
+        return true;
       }
     });
   }
@@ -148,7 +144,9 @@ public class NewEventActivity extends AppCompatActivity {
     DatePickerDialog datePickerDialog = new DatePickerDialog(this, new OnDateSetListener() {
       @Override
       public void onDateSet(DatePicker datePicker, int year, int monthOfYear, int dayOfMonth) {
-        etDate.setText(dayOfMonth + "/" + monthOfYear + "/" + year);
+        StringBuilder stringBuilder = new StringBuilder(dayOfMonth).append("/").append(monthOfYear)
+            .append("/").append(year);
+        etDate.setText(stringBuilder.toString());
       }
     }, startYear, startMonth, startDay);
     datePickerDialog.show();
@@ -157,10 +155,10 @@ public class NewEventActivity extends AppCompatActivity {
   private void showPlaceSelectionDialog() {
     Builder builder = new Builder(this);
     builder.setTitle("Select place");
-    builder.setSingleChoiceItems(places, 2, new DialogInterface.OnClickListener() {
+    builder.setSingleChoiceItems(PlaceConstant.places, 2, new DialogInterface.OnClickListener() {
       @Override
       public void onClick(DialogInterface dialogInterface, int i) {
-        etPlace.setText(places[i]);
+        etPlace.setText(PlaceConstant.places[i]);
       }
     });
 
