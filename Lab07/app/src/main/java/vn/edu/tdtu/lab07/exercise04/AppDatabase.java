@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase;
 
 @Database(entities = {Event.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {
-  private static final String DB_NAME = "LAB07_EXERCISE03_DB";
+  private static final String DB_NAME = "LAB07_EXERCISE04_DB";
   private static AppDatabase instance;
 
   public static synchronized AppDatabase getInstance(Context context) {

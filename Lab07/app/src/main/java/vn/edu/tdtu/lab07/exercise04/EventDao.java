@@ -9,19 +9,19 @@ import java.util.List;
 
 @Dao
 public interface EventDao {
-  @Query("SELECT * FROM event")
+  @Query("SELECT * FROM LAB07_EVENT2")
   List<Event> getAll();
 
-  @Query("SELECT * FROM event WHERE id IN (:eventIds)")
+  @Query("SELECT * FROM LAB07_EVENT2 WHERE id IN (:eventIds)")
   List<Event> loadAllByIds(int[] eventIds);
 
-  @Query("SELECT * FROM event WHERE completed IS :completed")
+  @Query("SELECT * FROM LAB07_EVENT2 WHERE completed IS :completed")
   List<Event> loadAllByCompleted(int completed);
 
-  @Query("SELECT * FROM event WHERE id IS :id LIMIT 1")
+  @Query("SELECT * FROM LAB07_EVENT2 WHERE id IS :id LIMIT 1")
   Event findById(int id);
 
-  @Query("SELECT * FROM event WHERE name LIKE :name LIMIT 1")
+  @Query("SELECT * FROM LAB07_EVENT2 WHERE name LIKE :name LIMIT 1")
   Event findByName(String name);
 
   @Update
@@ -33,6 +33,6 @@ public interface EventDao {
   @Delete
   void delete(Event event);
 
-  @Query("DELETE FROM event")
+  @Query("DELETE FROM LAB07_EVENT2")
   void deleteAll();
 }

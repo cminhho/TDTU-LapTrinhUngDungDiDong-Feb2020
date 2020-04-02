@@ -6,7 +6,7 @@ import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 import java.io.Serializable;
 
-@Entity(tableName="event")
+@Entity(tableName="LAB07_EVENT2")
 public class Event implements Serializable {
 
   @PrimaryKey(autoGenerate = true)

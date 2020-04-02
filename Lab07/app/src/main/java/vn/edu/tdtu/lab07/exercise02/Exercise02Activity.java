@@ -69,19 +69,6 @@ public class Exercise02Activity extends AppCompatActivity implements View.OnClic
   @Override
   public void onClick(View view) {
     switch (view.getId()) {
-      case R.id.btnReadInternal:
-        // READ data from internal file show it in the text box
-        clearTextMsg();
-        try {
-          String internalFileContent = readInternalFileContent();
-          txtMsg.setText(internalFileContent);
-          Toast.makeText(getApplicationContext(), "Done reading internal file", Toast.LENGTH_SHORT)
-              .show();
-        } catch (IOException e) {
-          Toast.makeText(getApplicationContext(), e.getMessage(),
-              Toast.LENGTH_SHORT).show();
-        }
-        break;
       case R.id.btnWriteInternal:
         // WRITE internal file data taken from the text box
         try {
@@ -93,14 +80,14 @@ public class Exercise02Activity extends AppCompatActivity implements View.OnClic
           Toast.makeText(getBaseContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
         }
         break;
-      case R.id.btnReadExternal:
-        // READ data from SD card file show it in the text box
+      case R.id.btnReadInternal:
+        // READ data from internal file show it in the text box
         clearTextMsg();
         try {
-          String externalFileContent = readExternalFileContent();
-          txtMsg.setText(externalFileContent);
-          Toast.makeText(getApplicationContext(), "Done reading SD " + EXTERNAL_FILE_NAME,
-              Toast.LENGTH_SHORT).show();
+          String internalFileContent = readInternalFileContent();
+          txtMsg.setText(internalFileContent);
+          Toast.makeText(getApplicationContext(), "Done reading internal file", Toast.LENGTH_SHORT)
+              .show();
         } catch (IOException e) {
           Toast.makeText(getApplicationContext(), e.getMessage(),
               Toast.LENGTH_SHORT).show();
@@ -118,11 +105,24 @@ public class Exercise02Activity extends AppCompatActivity implements View.OnClic
               Toast.LENGTH_SHORT).show();
         }
         break;
+      case R.id.btnReadExternal:
+        // READ data from SD card file show it in the text box
+        clearTextMsg();
+        try {
+          String externalFileContent = readExternalFileContent();
+          txtMsg.setText(externalFileContent);
+          Toast.makeText(getApplicationContext(), "Done reading SD " + EXTERNAL_FILE_NAME,
+              Toast.LENGTH_SHORT).show();
+        } catch (IOException e) {
+          Toast.makeText(getApplicationContext(), e.getMessage(),
+              Toast.LENGTH_SHORT).show();
+        }
+        break;
     }
   }
 
   private String readExternalFileContent() throws IOException {
-    StringBuilder stringBuffer = new StringBuilder();
+    StringBuilder stringBuilder = new StringBuilder();
     BufferedReader myReader = new BufferedReader(
         new InputStreamReader(
             new FileInputStream(
@@ -130,19 +130,10 @@ public class Exercise02Activity extends AppCompatActivity implements View.OnClic
 
     String aDataRow = "";
     while ((aDataRow = myReader.readLine()) != null) {
-      stringBuffer.append(aDataRow).append("\n");
+      stringBuilder.append(aDataRow).append("\n");
     }
     myReader.close();
-    return stringBuffer.toString();
-  }
-
-  private void writeExternalFile() throws IOException {
-    // Don't forget to request permission to read and write to SD card, such as mnt/sdcard/file.txt
-    File myFile = new File(mySdPath + "/" + EXTERNAL_FILE_NAME);
-    OutputStreamWriter outputStreamWriter = new OutputStreamWriter(new FileOutputStream(myFile));
-
-    outputStreamWriter.append(txtMsg.getText().toString());
-    outputStreamWriter.close();
+    return stringBuilder.toString();
   }
 
   private void writeInternalFileContent() throws IOException {
@@ -155,19 +146,28 @@ public class Exercise02Activity extends AppCompatActivity implements View.OnClic
     outputStreamWriter.close();
   }
 
+  private void writeExternalFile() throws IOException {
+    // Don't forget to request permission to read and write to SD card, such as mnt/sdcard/file.txt
+    File myFile = new File(mySdPath + "/" + EXTERNAL_FILE_NAME);
+    OutputStreamWriter outputStreamWriter = new OutputStreamWriter(new FileOutputStream(myFile));
+
+    outputStreamWriter.append(txtMsg.getText().toString());
+    outputStreamWriter.close();
+  }
+
   private String readInternalFileContent() throws IOException {
-    StringBuilder stringBuffer = new StringBuilder();
+    StringBuilder stringBuilder = new StringBuilder();
     InputStream inputStream = openFileInput(INTERNAL_FILE_NAME);
     if (inputStream != null) {
       BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
       String aDataRow = "";
 
       while ((aDataRow = reader.readLine()) != null) {
-        stringBuffer.append(aDataRow).append("\n");
+        stringBuilder.append(aDataRow).append("\n");
       }
       inputStream.close();
     }
-    return stringBuffer.toString();
+    return stringBuilder.toString();
   }
 
   private void createInternalFileIfNeeded() {

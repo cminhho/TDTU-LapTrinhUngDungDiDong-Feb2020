@@ -139,6 +139,7 @@ public class Exercise03Activity extends AppCompatActivity {
     builder.setPositiveButton("OK", new OnClickListener() {
       @Override
       public void onClick(DialogInterface dialogInterface, int i) {
+        mDbHelper.deleteAllEvents();
         showAllEventsFromDatabase();
         Toast.makeText(Exercise03Activity.this, "The selected phone is deleted!", Toast.LENGTH_LONG)
             .show();

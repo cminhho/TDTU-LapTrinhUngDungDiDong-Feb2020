@@ -20,12 +20,12 @@ public class Exercise01Activity extends AppCompatActivity {
     tvOpenTime = findViewById(R.id.tvOpenTimes);
 
     // Use SharedPreferences container to store primary value
-    SharedPreferences myPref = getSharedPreferences("lab07_exercise01_preference",
+    // the path to a preference file is: /data/data/packageName/shared_prefs/filename.
+    SharedPreferences myPref = getSharedPreferences("lab07_exercise01_preference2",
         Activity.MODE_PRIVATE);
 
     // retrieving data from SharedPreferences container (apply default if needed)
     int appStartupTimes = myPref.getInt(APP_STARTUP_TIME_KEY, 0);
-    tvOpenTime.setText(String.valueOf(appStartupTimes));
 
     // increase app startup time and save to SharedPreferences container
     // we need a Editor object to make preference changes
@@ -34,6 +34,6 @@ public class Exercise01Activity extends AppCompatActivity {
     editor.putInt(APP_STARTUP_TIME_KEY, increasedAppStartupTime);
     editor.apply();
 
-    // the path to a preference file is: /data/data/packageName/shared_prefs/filename.
+    tvOpenTime.setText(String.valueOf(increasedAppStartupTime));
   }
 }

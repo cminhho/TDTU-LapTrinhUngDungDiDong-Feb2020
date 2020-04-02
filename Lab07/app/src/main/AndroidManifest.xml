@@ -10,14 +10,16 @@
     android:supportsRtl="true"
     android:theme="@style/AppTheme">
     <activity
-      android:label="Exercise 01"
-      android:name="vn.edu.tdtu.lab07.exercise01.Exercise01Activity"></activity>
+      android:name="vn.edu.tdtu.lab07.exercise01.Exercise01Activity">
+    </activity>
     <activity
       android:label="Exercise 02"
-      android:name="vn.edu.tdtu.lab07.exercise02.Exercise02Activity"></activity>
+      android:name="vn.edu.tdtu.lab07.exercise02.Exercise02Activity">
+    </activity>
     <activity
       android:label="Exercise 03"
-      android:name="vn.edu.tdtu.lab07.exercise03.Exercise03Activity"></activity>
+      android:name="vn.edu.tdtu.lab07.exercise03.Exercise03Activity">
+    </activity>
     <activity
       android:name="vn.edu.tdtu.lab07.exercise03.NewEventActivity"
       android:parentActivityName="vn.edu.tdtu.lab07.exercise03.Exercise03Activity"></activity>
