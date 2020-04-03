@@ -31,7 +31,6 @@ public class EditStudentActivity extends AppCompatActivity {
   private static final String DEFAULT_EMPTY_VALUE = "";
   private EditText etId;
   private EditText etName;
-  private TextView etNameError;
   private EditText etEmail;
   private EditText etPhone;
 
@@ -46,14 +45,12 @@ public class EditStudentActivity extends AppCompatActivity {
     // bind ui controls
     etId = findViewById(R.id.et_id);
     etName = findViewById(R.id.et_name);
-    etNameError = findViewById(R.id.tv_name_error);
     etEmail = findViewById(R.id.et_phone);
     etPhone = findViewById(R.id.et_email);
 
-    btnSave = findViewById(R.id.btn_save);
+    etId.setEnabled(false);
 
-    // invisibility error messages
-    etNameError.setVisibility(View.INVISIBLE);
+    btnSave = findViewById(R.id.btn_save);
 
     // get intent that started this activity
     Intent callerIntent = getIntent();
@@ -72,8 +69,7 @@ public class EditStudentActivity extends AppCompatActivity {
         final String studentPhone = etPhone.getText().toString();
 
         if (studentName.trim().isEmpty()) {
-          etNameError.setText("Student name cannot be empty");
-          etNameError.setVisibility(View.VISIBLE);
+          // do something
         } else {
           final String studentId = etId.getText().toString();
           Student updatedStudent = new Student(studentId, studentName, studentEmail,

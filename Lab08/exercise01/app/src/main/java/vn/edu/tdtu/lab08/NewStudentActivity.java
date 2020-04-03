@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,7 +23,6 @@ import org.json.JSONObject;
 public class NewStudentActivity extends AppCompatActivity {
 
   private EditText etName;
-  private TextView etNameError;
   private EditText etEmail;
   private EditText etPhone;
 
@@ -38,14 +36,10 @@ public class NewStudentActivity extends AppCompatActivity {
 
     // bind ui controls
     etName = findViewById(R.id.et_name);
-    etNameError = findViewById(R.id.tv_name_error);
     etEmail = findViewById(R.id.et_phone);
     etPhone = findViewById(R.id.et_email);
 
     btnSave = findViewById(R.id.btn_save);
-
-    // invisibility error messages
-    etNameError.setVisibility(View.INVISIBLE);
 
     btnSave.setOnClickListener(new OnClickListener() {
       @Override
@@ -55,8 +49,7 @@ public class NewStudentActivity extends AppCompatActivity {
         final String studentPhone = etPhone.getText().toString();
 
         if (studentName.trim().isEmpty()) {
-          etNameError.setText("Student name cannot be empty");
-          etNameError.setVisibility(View.VISIBLE);
+          // do something
         } else {
           Student newStudent = new Student(studentName, studentEmail, studentPhone);
           createStudent(newStudent);
@@ -78,6 +71,7 @@ public class NewStudentActivity extends AppCompatActivity {
 
                 Intent studentsIntent = new Intent();
                 setResult(Activity.RESULT_OK, studentsIntent);
+                finish();
               } else {
                 Toast.makeText(getBaseContext(), "Failed: " + jsonObject.getString("message"),
                     Toast.LENGTH_SHORT).show();

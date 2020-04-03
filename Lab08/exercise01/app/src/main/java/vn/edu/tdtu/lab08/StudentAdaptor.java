@@ -138,11 +138,6 @@ public class StudentAdaptor extends RecyclerView.Adapter<StudentAdaptor.MyViewHo
     public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
 
     }
-//    @Override
-//    public void onClick(View view) {
-//      Student selectedStudent = mStudentList.get(getAdapterPosition());
-//      startEditStudentActivity(selectedStudent);
-//    }
   }
 
   private void startEditStudentActivity(Student selectedStudent) {

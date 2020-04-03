@@ -8,6 +8,7 @@
   <permission
     android:name="vn.edu.tdtu.lab08exercise02sender.PERMISSION"
     android:protectionLevel="signature"/>
+
   <uses-permission android:name="vn.edu.tdtu.lab08exercise02sender.PRIVATE"/>
 
   <application
