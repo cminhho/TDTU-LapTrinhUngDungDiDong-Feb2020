@@ -53,8 +53,8 @@ public class PlayActivity extends Activity {
      */
     mMedia = new MediaPlayer();
     try {
-      Log.d("Path", "/mnt/sdcard/mymusic/" + MusicPath);
-      mMedia.setDataSource("/mnt/sdcard/mymusic/" + MusicPath);
+      Log.d("Path", MediaFileActivity.MP3_PATH + MusicPath);
+      mMedia.setDataSource(MediaFileActivity.MP3_PATH + MusicPath);
       mMedia.prepare();
 
     } catch (IOException e) {
@@ -71,10 +71,10 @@ public class PlayActivity extends Activity {
       }
     });
 
-    final Button btn1 = (Button) findViewById(R.id.button1); // Start
-    final Button btn2 = (Button) findViewById(R.id.button2); // Pause
-    final Button btn3 = (Button) findViewById(R.id.button3); // Stop
-    final Button btn4 = (Button) findViewById(R.id.button4); // Back
+    final Button btn1 = findViewById(R.id.button1); // Start
+    final Button btn2 = findViewById(R.id.button2); // Pause
+    final Button btn3 = findViewById(R.id.button3); // Stop
+    final Button btn4 = findViewById(R.id.button4); // Back
 
     // Start
     btn1.setOnClickListener(new View.OnClickListener() {
