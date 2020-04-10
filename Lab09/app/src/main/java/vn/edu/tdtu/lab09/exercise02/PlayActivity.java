@@ -33,11 +33,11 @@ public class PlayActivity extends Activity {
     }
 
     Intent intent = getIntent();
-    final String MusicName = intent.getStringExtra("vMusicName");
-    final String MusicPath = intent.getStringExtra("vMusicPath");
+    final String musicName = intent.getStringExtra("vMusicName");
+    final String musicPath = intent.getStringExtra("vMusicPath");
 
-    final TextView txtView = (TextView) findViewById(R.id.textView1);
-    txtView.setText(MusicName);
+    final TextView txtView = findViewById(R.id.textView1);
+    txtView.setText(musicName);
 
     /* Resource in R.
      * mMedia = MediaPlayer.create(this, R.raw.music);
@@ -53,8 +53,8 @@ public class PlayActivity extends Activity {
      */
     mMedia = new MediaPlayer();
     try {
-      Log.d("Path", MusicPath);
-      mMedia.setDataSource(MusicPath);
+      Log.d("Path", musicPath);
+      mMedia.setDataSource(musicPath);
       mMedia.prepare();
 
     } catch (IOException e) {
@@ -62,11 +62,11 @@ public class PlayActivity extends Activity {
       e.printStackTrace();
     }
 
-    seekBar = (SeekBar) findViewById(R.id.seekBar1);
+    seekBar = findViewById(R.id.seekBar1);
     seekBar.setMax(mMedia.getDuration());
     seekBar.setOnTouchListener(new OnTouchListener() {
       public boolean onTouch(View v, MotionEvent event) {
-        UpdateseekChange(v);
+        updateSeekChange(v);
         return false;
       }
     });
@@ -134,7 +134,7 @@ public class PlayActivity extends Activity {
 
   }
 
-  private void UpdateseekChange(View v) {
+  private void updateSeekChange(View v) {
     if (mMedia.isPlaying()) {
       SeekBar sb = (SeekBar) v;
       mMedia.seekTo(sb.getProgress());

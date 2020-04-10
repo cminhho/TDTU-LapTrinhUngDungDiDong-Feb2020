@@ -2,7 +2,6 @@ package vn.edu.tdtu.lab09.exercise02;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,6 @@ import vn.edu.tdtu.lab09.R;
 
 public class MediaFileAdaptor extends RecyclerView.Adapter<MediaFileAdaptor.MyViewHolder> {
 
-  private Handler handler = new Handler();
   int mPosition;
   private Context context;
   private List<MediaFile> mMediaList;
@@ -27,7 +25,7 @@ public class MediaFileAdaptor extends RecyclerView.Adapter<MediaFileAdaptor.MyVi
   @Override
   public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
     View view = LayoutInflater.from(context)
-       .inflate(R.layout.exercise02_list_row, viewGroup, false);
+        .inflate(R.layout.exercise02_list_row, viewGroup, false);
 
     return new MyViewHolder(view);
   }
@@ -72,7 +70,7 @@ public class MediaFileAdaptor extends RecyclerView.Adapter<MediaFileAdaptor.MyVi
       itemView.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-          Intent newActivity = new Intent(context,PlayActivity.class);
+          Intent newActivity = new Intent(context, PlayActivity.class);
           newActivity.putExtra("vMusicName", mMediaList.get(getAdapterPosition()).getName());
           newActivity.putExtra("vMusicPath", mMediaList.get(getAdapterPosition()).getPath());
           context.startActivity(newActivity);

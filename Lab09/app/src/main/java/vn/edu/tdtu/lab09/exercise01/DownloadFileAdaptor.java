@@ -136,12 +136,11 @@ public class DownloadFileAdaptor extends RecyclerView.Adapter<DownloadFileAdapto
   // View Image from SD Card
   public void viewImageSDCard(int position) {
     final Builder imageDialog = new Builder(context);
-    final LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
 
     View layout = LayoutInflater.from(context)
         .inflate(R.layout.exercise01_custom_fullimage_dialog, null);
 
-    ImageView image = (ImageView) layout.findViewById(R.id.fullimage);
+    ImageView image = layout.findViewById(R.id.fullimage);
 
     String urlDownload = mDownloadedFileList.get(position).getDownloadPath();
 
