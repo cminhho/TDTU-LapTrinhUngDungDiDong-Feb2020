@@ -53,8 +53,8 @@ public class PlayActivity extends Activity {
      */
     mMedia = new MediaPlayer();
     try {
-      Log.d("Path", MediaFileActivity.MP3_PATH + MusicPath);
-      mMedia.setDataSource(MediaFileActivity.MP3_PATH + MusicPath);
+      Log.d("Path", MusicPath);
+      mMedia.setDataSource(MusicPath);
       mMedia.prepare();
 
     } catch (IOException e) {
